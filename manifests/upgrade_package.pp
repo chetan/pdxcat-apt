@@ -35,8 +35,8 @@ define apt::upgrade_package ($version = "") {
   include apt
 
   $version_suffix = $version ? {
-    ""       => ""
-    "latest" => ""
+    ""       => "",
+    "latest" => "",
     default  => "=${version}",
   }
 
